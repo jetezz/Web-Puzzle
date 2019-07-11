@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css.css">
+	<script src="practica3.js"></script>
+	<link rel="stylesheet"  href="alertifyJS/css/alertify.min.css">
+	<link rel="stylesheet"  href="alertifyJS/css/themes/semantic.min.css">
+	<script src="alertifyJS/alertify.min.js"></script>
+</head>
+<body>
+	<header>
+	
+		
+			<img src="fotos/1396902006.png" height="100px" width="100px" >
+		
+		<h1> Los mejores puzzles personalizados</h1>	
+		
+	
+</header>
+<section>
+	<div>
+	<article>
+		<h2>Instrucciones</h2>
+		1-Selecciona una imagen pinchando en la imagen o arrastrando <br>
+		2-Escoge una dificultad y el color de las lineas <br>
+		3-dale a comenzar <br>
+		4-Si desea salir antes de acabar el puzzle seleccione finalizar partida <br>
+
+	</article>
+	<div>
+</section>
+	
+
+	<section>
+		
+		<div>
+			
+			<article >
+				<h2>Elige una imagen</h2>
+				<div>
+					<label for="cambiar"><canvas id="cv01"></canvas></label>
+				</div>
+				<footer></h3>
+						<input type="file" name=""  onchange="ponerfoto(this)" id="cambiar"><br>
+
+					
+				</footer>
+			</article>
+			
+			<article>
+				<h2>Crea tu puzzle</h2>
+				<div>
+					<canvas id="cv02"></canvas>
+				</div>
+				<footer>
+					
+					
+					<label> color <input  type="color" id="color-borde" onchange="cambiarcolor();"></label><br>
+					Dificultad:
+					<select id="dificultad" onchange="juego()">
+ 					 <option  value="1"  > facil</option>
+ 					<option  value="2"  > medio</option>
+ 					<option  value="3"  > dificil</option>
+ 				</select>
+ 					 <input type="button" id="comenzar" value="comenzar" disabled  onclick="comenzar()"> 
+ 					 <input type="button" id="finalizar" disabled value="Finalizar Partida"  onclick="finalizar()"> 
+ 					 <input type="button" id="ayuda" disabled value="Ayuda"  onclick="ayuda()"> 
+ 					
+					</form> 
+
+				</footer>
+			</article>
+		</div>
+		<div >
+			<article>
+				<div class="estadisticas">
+				</div>
+			</article>
+		</div>
+	</section>
+	
+	
+	<script>
+		prepararcanvas();
+		seleccionar();
+	</script>
+
+	<footer>
+	<p>&copy; <strong>PCW</strong> <time datetime="2018-02">Mayo 2018</time>
+		<a href="acerca.html">Acerca</p> <a href="index.html" <button> <span class ="icon-up-big"></span></button></a>
+</footer>
+</body>
+</html>
